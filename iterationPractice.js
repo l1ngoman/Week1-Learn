@@ -88,18 +88,18 @@
 // filterArrayValues([58, '', 'abcd', true, null, false, 0]) should return [58, "abcd", true]
 //
 
-// var arr = [58, '', false, 'abcd', true, null, 0, 66];
-// function filter(array) {
-//   for (var i = 0; i < array.length; i++) {
-//     if (array[i] == false || array[i] == null || array[i] == undefined) {
-//       console.log(array[i]);
-//       array.splice(i, 1);
-//     }
-//   }
-//   console.log(array);
-// }
-//
-// filter(arr);
+var arr = [58, '', false, 'abcd', true, null, 0, 66, false, null, 0];
+var newArray = [];
+function filter(array) {
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] != false && array[i] != null && array[i] != undefined) {
+      newArray.push(array[i]);
+    }
+  }
+  console.log(newArray);
+}
+
+filter(arr);
 
 // Sum Target
 // Write a Javascript function to find a pair of elements (indices of the two numbers) from a given array whose sum equals a specific target number.
