@@ -14,3 +14,5 @@ console.log(str.length)
 console.log((4*6/2+2-1)/0)
 console.log(5.5%4)
 console.log(str.length*5)
+
+conole.log("I'm adding stuff to test my GitHub")
