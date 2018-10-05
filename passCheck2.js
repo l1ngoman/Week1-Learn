@@ -3,10 +3,14 @@
 function getCreds(){
 // // get and check user ID
 // //if user ID methods meet criteria, break the loop
+
   do{
     var id = prompt("Enter a User ID");
     var length = checkCharLength(id) == true;
-    var char = hasStrangeChar(id,0) == false; // want answer to be false
+    var char = hasStrangeChar(id) == false; // want answer to be false
+    if(!length || !char){
+      alert("User ID & password MUST 6 or more characters \nUser ID can't include !, #, or $")
+    }
   }while(!length || !char);
 
 // check password
@@ -14,7 +18,7 @@ function getCreds(){
     var pass = prompt("Enter a password");
     var same = isSame(id,pass) == false;
     var length = checkCharLength(pass) == true;
-    var char = hasStrangeChar(pass,1) == true; //want answer to be true
+    var char = hasStrangeChar(pass) == true; //want answer to be true
     var hasNum = hasNumber(pass) == true;
     var actuallyPassword = isActuallyPassword(pass) == false;
   }while(!same || !length || !char || !hasNumber || !actuallyPassword);
@@ -29,28 +33,20 @@ function checkCharLength(string){
   }
 }
 //function to test if ID or password contains !#$
-function hasStrangeChar(string,key){
-  var bool;
+function hasStrangeChar(string){
   for (var i=0; i < string.length; i++){
     if(string.indexOf("!") !== -1){
-      bool = true;
+      return true;
       break;
     }else if(string.indexOf("#") !== -1){
-      bool =  true;
+      return true;
       break;
     }else if(string.indexOf("$") !== -1){
-      bool = true;
+      return true;
       break;
     }else {
-      bool = false;
+      return false;
     }
-  }
-  if(key == 0){
-    alert("User ID can't include !, #, or $.")
-    return bool;
-  }else{
-    alert("Password must include !, #, or $.")
-    return bool;
   }
 }
 //function to check that password has at least one digit
