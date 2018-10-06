@@ -21,6 +21,9 @@ function getCreds(){
     var char = hasStrangeChar(pass) == true; //want answer to be true
     var hasNum = hasNumber(pass) == true;
     var actuallyPassword = isActuallyPassword(pass) == false;
+    if(!same || !length || !char || !hasNumber || !actuallyPassword){
+      alert("User ID and password cannot be the same\nPassword must include !, #, or $\nPassword must contain a number\nPassword cannot be 'password'\nPassword MUST contain 6 or mor characters")
+    }
   }while(!same || !length || !char || !hasNumber || !actuallyPassword);
 }
 // //function to test if value is six chars long
@@ -28,7 +31,6 @@ function checkCharLength(string){
   if(string.length>=6){
     return true;
   }else{
-    alert("User ID & password MUST 6 or more characters");
     return false;
   }
 }
@@ -54,7 +56,6 @@ function hasNumber(string){
   for (var i=0; i < string.length; i++){
     for(var j=0; j < 10; j++){
       if(string[i] == j){
-        alert("Password must contain a number");
         return false;
       }
     }
@@ -74,7 +75,6 @@ function isSame(id,pass){
         return false;
       }
     }
-    alert("User ID and password cannot be the same");
     return true;
   }
 }
@@ -91,16 +91,16 @@ function isActuallyPassword(string){
         return false;
       }
     }
-    alert("Password cannot be 'password'");
     return true;
   }
 }
-//1. User ID can't include !, #, or $
-//2. User ID and password cannot be the same
-//3. Password must include !, #, or $
-//4. Password must contain a number
-//5. Password cannot be "password"
-//6. User ID & password MUST 6 or more characters
+User ID can't include !, #, or $
+User ID and password cannot be the same
+Password must include !, #, or $
+Password must contain a number
+Password cannot be "password"
+Password MUST contain 6 or mor characters
+User ID & password MUST 6 or more characters
 //function that produces alert messages based on intake value
 
 
