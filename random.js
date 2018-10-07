@@ -80,3 +80,28 @@
 // var sentenceFactory = (...words) => {return words.join('');}
 //
 // console.log(sentenceFactory("hello ", "to ", "world "));
+// function getName(){
+//   return " name";
+// }
+//
+// var intro = "My name is";
+//
+// function fullIntro(string,func){
+//   console.log(string + func());
+// }
+//
+// fullIntro(intro,getName);
+// var sites = ["codepen.io", "codecademy.com", "coursera.org", "egghead.io", "udemy.com", "pluralsight.com", "udacity.com", "sitepoint.com"]
+// function isDotOrg(siteName){
+//   if(siteName.includes(".org")){
+//     return true;
+//   }else{
+//     return false;
+//   }
+// }
+// function loopOver(array,func){
+//   for(let i=0;i<sites.length;i++){
+//     console.log(`Name: ${array[i]} - ${func(array[i])}`);
+//   }
+// }
+// loopOver(sites,isDotOrg);
