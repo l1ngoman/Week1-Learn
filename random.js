@@ -105,3 +105,6 @@
 //   }
 // }
 // loopOver(sites,isDotOrg);
+let winArr = [[5,6],[58,59],[33,41],[89,99],[12,22]];
+
+console.log(winArr[1].includes(59))

@@ -38,23 +38,25 @@
 // }
 // console.log(useMap([1,2,3,4,5]))
 
-var arr = ["y",5,7,"ten",2,15,"z"]
+// var arr = ["y",5,7,"ten",2,15,"z"]
+//
+// var getNums = (arr) => {
+//   newArr = []
+//   for(let i=0;i<arr.length;i++){
+//       if(typeof arr[i]=="number"){
+//         newArr.push(arr[i])
+//       }
+//   }
+//   return newArr;
+// }
+//
+// console.log(getNums(arr))
+//
+//
+// var getNumsWithFilter = (arr) => {
+//   return arr.filter(el => (typeof el == "number"))
+// }
+//
+// console.log(getNumsWithFilter(arr));
 
-var getNums = (arr) => {
-  newArr = []
-  for(let i=0;i<arr.length;i++){
-      if(typeof arr[i]=="number"){
-        newArr.push(arr[i])
-      }
-  }
-  return newArr;
-}
-
-console.log(getNums(arr))
-
-
-var getNumsWithFilter = (arr) => {
-  return arr.filter(el => (typeof el == "number")) 
-}
-
-console.log(getNumsWithFilter(arr));
+// var arr = ["y",5,7,"ten",2,15,"z"]
